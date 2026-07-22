@@ -1,0 +1,1 @@
+sentence.slice(0, 8);
