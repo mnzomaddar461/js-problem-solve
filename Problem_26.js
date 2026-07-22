@@ -19,4 +19,12 @@ const hastrue = array.includes('Naim');
 console.log(hastrue);
 const position = array.indexOf('Naim');
 console.log(position);
-
+const sizeofarray = array.length;
+for(let i = 0; i < sizeofarray; i++){
+    console.log(array[i]);
+}
+let j = 0
+while(j < sizeofarray){
+    console.log(array[j]);
+    j++;
+}
