@@ -80,3 +80,91 @@ const Profile = {
 console.log(Profile);
 console.log(Profile.name);
 
+//What is an Object ? 
+// Object is an importent part in codeing life. Object mainlly using on create a product info or profile info etc. Inside the object has many type of keys, and thi keys mainlly represent charectaristic of object. If you want to access a kye on object is possible. This the most part or benifit of object is at same time init more info but same task not possible on string.
+
+
+// Task 8
+
+let car = {
+    brand: "Toyota",
+    model: "Corolla",
+    year: 2022,
+}
+
+console.log("Current info of car: ", car);
+const carbrand = car.brand;
+console.log("Brand: ", carbrand);
+
+const carmodel = car["model"];
+console.log("Model: ", carmodel);
+
+car["color"] = 'Bule';
+const carcolor = car["color"];
+console.log("Color: ", carcolor);
+car.year = 2023;
+
+console.log("Update info: ", car);
+
+// Task 9
+let book = { title: "The Hobbit", author: "Tolkien", pages: 310 };
+const keys = Object.keys(book);
+console.log(keys);
+
+const value = Object.values(book);
+console.log("Values: ", value);
+delete book.pages;
+console.log("after delete: ", book);
+
+// Task 10
+let user = {
+    username: "coder123",
+    address: {
+    city: "Austin",
+    zip: "78701"
+    }
+}
+
+console.log("Cite Name: ", user.address.city);
+user.address.country = 'USA';
+
+delete user.address.zip;
+console.log("After all update : ", user);
+
+// Task 11
+let scores = { math: 90, science: 85, art: 95 };
+for(let key in scores){
+    console.log(key + ":" + scores[key]);
+}
+
+let result = 0;
+for(let value in scores){
+    result += scores[value];
+}
+
+const average  = Object.keys(scores).length
+const finalresult = result / average;
+console.log("average : ", finalresult);
+
+// Task 12
+// Build a small "contact" system:
+let contact = {
+    name: "Alex Johnson",
+    email: "ALEX@EMAIL.COM",
+    phone: "555-1234"
+};
+contact.email = contact.email.toLocaleLowerCase()
+console.log("Update Email: ", contact);
+
+for(const pair in contact){
+    console.log(pair + ": " + contact[pair]);
+}
+
+contact.favoriteWords = [];
+contact.favoriteWords.push("Mr");
+contact.favoriteWords.push(" Naim");
+contact.favoriteWords.push(" Zomaddar");
+
+console.log("Add New proparty: ", contact);
+
+console.log(contact.email.toLocaleLowerCase().endsWith("@email.com"));
