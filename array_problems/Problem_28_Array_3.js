@@ -9,3 +9,21 @@ const uniqueArray = [];
     }
 
 console.log(uniqueArray);
+
+// 2. Given an array of mixed values (numbers and strings), separate them into two arrays and log both.
+const mixedarray = [2, 'naim', 26, 'A', 'UGV', 28];
+const strings = [];
+const numbers = [];
+
+for(const item of mixedarray){
+    if(typeof item === 'number'){
+        numbers.push(item);
+    }
+    else if(typeof item === 'string'){
+        strings.push(item);
+    }
+}
+
+console.log("NUmber: ", numbers);
+console.log("String: ", strings);
+console.log("Mearg two array: ", numbers.concat(strings));
