@@ -27,3 +27,18 @@ for(const item of mixedarray){
 console.log("NUmber: ", numbers);
 console.log("String: ", strings);
 console.log("Mearg two array: ", numbers.concat(strings));
+
+// 3. Given an array of numbers, find the largest and smallest value without using Math.max or Math.min directly on the whole array (use a loop).
+let max = array1[0];
+let min = array1[0];
+for(let i = 1; i < array1.length; i++){
+    if(array1[i] > max){
+        max = array1[i];
+    }
+    if(array1[i] < min){
+        min = array1[i];
+    }
+}
+
+console.log("MAX : ", max);
+console.log("min : ", min);
